@@ -4,6 +4,8 @@ import { AuthUserContext } from '../Session';
 import { withFirebase } from '../Firebase';
 import MessageList from './MessageList';
 
+import Button from 'react-bootstrap/Button';
+
 class Messages extends Component {
   constructor(props) {
     super(props);
@@ -95,9 +97,9 @@ class Messages extends Component {
         {authUser => (
           <div>
             {!loading && messages && (
-              <button type="button" onClick={this.onNextPage}>
+              <Button type="Button" onClick={this.onNextPage}>
                 More
-              </button>
+              </Button>
             )}
 
             {loading && <div>Loading ...</div>}
@@ -123,7 +125,7 @@ class Messages extends Component {
                 value={text}
                 onChange={this.onChangeText}
               />
-              <button type="submit">Send</button>
+              <Button type="submit">Send</Button>
             </form>
           </div>
         )}

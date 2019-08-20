@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from 'react-bootstrap/Button';
+
 class MessageItem extends Component {
   constructor(props) {
     super(props);
@@ -50,20 +52,20 @@ class MessageItem extends Component {
           <span>
             {editMode ? (
               <span>
-                <button onClick={this.onSaveEditText}>Save</button>
-                <button onClick={this.onToggleEditMode}>Reset</button>
+                <Button onClick={this.onSaveEditText}>Save</Button>
+                <Button onClick={this.onToggleEditMode}>Reset</Button>
               </span>
             ) : (
-              <button onClick={this.onToggleEditMode}>Edit</button>
+              <Button onClick={this.onToggleEditMode}>Edit</Button>
             )}
 
             {!editMode && (
-              <button
-                type="button"
+              <Button
+                type="Button"
                 onClick={() => onRemoveMessage(message.uid)}
               >
                 Delete
-              </button>
+              </Button>
             )}
           </span>
         )}

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { withFirebase } from '../Firebase';
 
+import Button from 'react-bootstrap/Button';
+
 class UserItem extends Component {
   constructor(props) {
     super(props);
@@ -58,12 +60,12 @@ class UserItem extends Component {
               <strong>Username:</strong> {user.username}
             </span>
             <span>
-              <button
-                type="button"
+              <Button
+                type="Button"
                 onClick={this.onSendPasswordResetEmail}
               >
                 Send Password Reset
-              </button>
+              </Button>
             </span>
           </div>
         )}
