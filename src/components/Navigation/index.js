@@ -5,7 +5,7 @@ import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 
 const Navigation = () => (
   <AuthUserContext.Consumer>
@@ -20,11 +20,11 @@ const Navigation = () => (
 );
 
 const NavigationAuth = ({ authUser }) => (
-  <Navbar expand="lg" variant="dark" bg="dark">
-    <Navbar.Brand href={ROUTES.LANDING}>React-Bootstrap</Navbar.Brand>
+  <Navbar bg="light" expand="lg">
+    <Navbar.Brand href={ROUTES.LANDING} style={{color: '#ffffff', fontWeight: '600'}}>College News App</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="ml-auto">
           <Nav.Link href={ROUTES.LANDING}>Landing</Nav.Link>
           <Nav.Link href={ROUTES.HOME}>Home</Nav.Link>
           <Nav.Link href={ROUTES.ACCOUNT}>Account</Nav.Link>
@@ -38,16 +38,16 @@ const NavigationAuth = ({ authUser }) => (
 );
 
 const NavigationNonAuth = () => (
-<Navbar expand="lg" variant="dark" bg="dark">
-  <Navbar.Brand href={ROUTES.LANDING}>React-Bootstrap</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="mr-auto">
-        <Nav.Link href={ROUTES.LANDING}>Landing</Nav.Link>
-        <Nav.Link href={ROUTES.SIGN_IN}>Sign In</Nav.Link>
-      </Nav>
-  </Navbar.Collapse>
-</Navbar>
+  <Navbar bg="light" expand="lg">
+    <Navbar.Brand href={ROUTES.LANDING} style={{color: '#ffffff', fontWeight: '600'}}>College News App</Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="ml-auto">
+          <Nav.Link href={ROUTES.LANDING} style={{color: '#ffffff'}}>Landing</Nav.Link>
+          <Button className="signin-button"><Nav.Link href={ROUTES.SIGN_IN} style={{color: '#ffffff'}}>Sign In</Nav.Link></Button>
+        </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 );
 
 export default Navigation;

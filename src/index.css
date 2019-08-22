@@ -1,18 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat|Open+Sans|PT+Sans|Roboto|Ubuntu&display=swap');
+
+* {
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'PT Sans', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
+  /* font-family: 'Fira Sans', sans-serif; */
+  /* font-family: 'Montserrat', sans-serif; */
+}
+
+.navbar {
+  font-size: 1em !important;
+  /* position: relative; */
+
+  text-align: center;
+
+  /* Loan Money */
+  background-color: #abe9cd;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+  
+}
+
 .landing-page {
-    height: 80vh;
-    width: auto; 
-    border-radius: 20px;
-    margin: 5%;
+  /* background: url("./assets/landing-page-gif.gif") center center no-repeat; */  
+  text-align: center;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  position: relative;
+  margin: auto;
+  padding: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: auto;
 
-    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  max-height: calc(100vh - 56px);
 
-    background-color: #eec0c6;
-    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./assets/landing-page-gif.gif");
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.navbar,
-.navbar-default {
-    background-color: #738bdc;
-    background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+.landing-page__text--one {
+  position: absolute;
+  width: 100%;
+  bottom: 60%;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px #000000;
+  font-size: 1.8em;
+  font-family: 'Montserrat', sans-serif;  
+
+  top: 20%;
+  padding: 0 2% 0 2%;
 }
 
+.landing-page__text--two {
+  position: absolute;
+  width: 100%;
+  bottom: 35%;
+  padding: 0 5% 0 5%;
+  text-align:center;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px #000000;
+  font-size: 1.6em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.landing-page__button {
+  position: absolute;
+  font-size: 1.5em;
+  border-radius: 4px;
+  cursor: pointer; 
+  bottom: 65px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  text-align: center;
+  padding: 10px 25px;
+  outline: none;
+  text-decoration: none !important;
+  letter-spacing: 0.5px;
+
+  font-family: 'Open Sans', sans-serif;
+
+  color: #ffffff; 
+
+  /* Mars Ambassador */
+  background-color: #fc9842;
+  background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+}
+
+.orange-button {
+  /* position: absolute; */
+  font-size: 1.4em;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px !important; 
+  bottom: 15px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* padding: 10px 25px !important; */
+  /* outline: none !important; */
+  text-decoration: none !important;
+  border: none !important;
+  letter-spacing: 0.5px;
+
+  font-family: 'Open Sans', sans-serif;
+
+  color: #ffffff;
+
+  /* Mars Ambassador */
+  background-color: #fc9842;
+  background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+
+  display: flex !important;
+  justify-content: center !important;
+
+  margin: 0 auto;
+}
+
+.blue-button {
+  /* position: absolute; */
+  font-size: 1.5em;
+  border-radius: 4px;
+  cursor: pointer; 
+  bottom: 15px;
+  /* display: flex; */
+  /* justify-content: center; */
+  text-align: center;
+  /* padding: 10px 25px !important; */
+  /* outline: none !important; */
+  text-decoration: none !important;
+  border: none !important;
+  letter-spacing: 0.5px;
+
+  font-family: 'Open Sans', sans-serif;
+
+  color: #ffffff; 
+
+  /* Loan Money */
+  background-color: #abe9cd;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+}
+
+.google-button, .facebook-button, .twitter-button {
+  margin: 10px 10px 10px 10px;
+  background-color: #abe9cd;
+
+  text-decoration: none !important;
+  border: none !important;
+
+  /* border-radius: 4px; */
+  cursor: pointer; 
+
+  padding: 10px 20px 10px 20px !important;
+} 
+
+.twitter-button {
+  background-color: #8fcee1 !important;
+}
+
+.facebook-button {
+  background-color: #4087c4 !important;
+}
+
+.google-button {
+  background-color: #e24a3b ! important;
+}
+
+.signin-card {
+  margin: 5% 5% 5% 5%;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  padding: 10%;
+
+  font-size: .9em !important;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 60%; 
+  max-width: 80%;
+  /* padding-left:15px;
+  padding-right:15px; */
+  color: #333333 !important;
+  outline: none; /* Removes outline */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+input[type="text"] {
+  border: 0px;
+  border-bottom: solid 1px #636363;
+  padding-bottom: 4px;
+  color: #333333 !important;
+  font-weight: 100 !important;
+  /* letter-spacing: 1px; */
+  font-size: 15px;
+  /* border-radius: 0px;  */
+  background: transparent;
+  /* margin-top: 5%;
+  margin-right: 10px !important; */
+
+  font-family: 'Montserrat', sans-serif;  
+}
+input[type="password"] {
+  border: 0px;
+  border-bottom: solid 1px #636363;
+  padding-bottom: 4px;
+  color: #333333 !important;
+  font-weight: 100 !important;
+  /* letter-spacing: 1px; */
+  font-size: 15px;
+  /* border-radius: 0px; */
+  background: transparent;
+  /* margin-bottom: 5%;
+  margin-right: 10px !important; */
+
+  font-family: 'Montserrat', sans-serif;  
+}
+
+.signup-card {
+  margin: 5% 5% 5% 5%;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  padding: 10%;
+
+  font-size: .9em !important;
+}
+
+.signin-button {
+  display: block;
+}
+
+.admin {
+  width: 100%;
+}
+input[type=checkbox] {
+  margin: 0 auto;
+  display: table;
+}

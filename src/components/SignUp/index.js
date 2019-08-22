@@ -9,9 +9,9 @@ import * as ROLES from '../../constants/roles';
 import Button from 'react-bootstrap/Button';
 
 const SignUpPage = () => (
-  <div>
+  <div className="signup-card">
     <h1>SignUp</h1>
-    <SignUpForm />
+    <SignUpForm/>
   </div>
 );
 
@@ -102,50 +102,52 @@ class SignUpFormBase extends Component {
       username === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <label>
-          Admin:
+      <div className="form">
+        <form onSubmit={this.onSubmit}>
           <input
-            name="isAdmin"
-            type="checkbox"
-            checked={isAdmin}
-            onChange={this.onChangeCheckbox}
+            name="username"
+            value={username}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Full Name"
           />
-        </label>
-        <Button disabled={isInvalid} type="submit">
-          Sign Up
-        </Button>
+          <input
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Email Address"
+          />
+          <input
+            name="passwordOne"
+            value={passwordOne}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Password"
+          />
+          <input
+            name="passwordTwo"
+            value={passwordTwo}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Confirm Password"
+          />
+          <label className="admin" style={{display: 'block'}}>
+            Admin:
+            <input
+              name="isAdmin"
+              type="checkbox"
+              checked={isAdmin}
+              onChange={this.onChangeCheckbox}
+            />
+          </label>
+          <Button disabled={isInvalid} type="submit" className="signup-button">
+            Sign Up
+          </Button>
 
-        {error && <p>{error.message}</p>}
-      </form>
+          {error && <p>{error.message}</p>}
+        </form>
+      </div>
     );
   }
 }

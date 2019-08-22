@@ -13,8 +13,6 @@ import AdminPage from '../Admin';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 
-import { Navbar, Nav } from 'react-bootstrap';
-
 const App = () => (
   <div className="inline">
     <Router>

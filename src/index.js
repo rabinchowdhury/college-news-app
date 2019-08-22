@@ -5,6 +5,9 @@ import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 import "bootstrap/dist/css/bootstrap.css";
+import 'font-awesome/css/font-awesome.min.css';
+
+import './Animate.css';
 
 import App from './components/App';
 import Firebase, { FirebaseContext } from './components/Firebase';

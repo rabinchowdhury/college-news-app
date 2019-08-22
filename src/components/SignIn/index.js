@@ -10,9 +10,10 @@ import * as ROUTES from '../../constants/routes';
 import Button from 'react-bootstrap/Button';
 
 const SignInPage = () => (
-  <div>
-    <h1>SignIn</h1>
+  <div className="signin-card">
+    <h2>Sign In</h2>
     <SignInForm />
+    <hr></hr>
     <SignInGoogle />
     <SignInFacebook />
     <SignInTwitter />
@@ -70,27 +71,29 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="password"
-          value={password}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <Button disabled={isInvalid} type="submit">
-          Sign In
-        </Button>
+      <div className="form">
+        <form onSubmit={this.onSubmit}>
+          <input
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Email address"
+          />
+          <input
+            name="password"
+            value={password}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Password"
+          />
+          <Button className="orange-button" disabled={isInvalid} type="submit">
+            Sign In
+          </Button>
 
-        {error && <p>{error.message}</p>}
-      </form>
+          {error && <p>{error.message}</p>}
+        </form>
+      </div>
     );
   }
 }
@@ -133,7 +136,7 @@ class SignInGoogleBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <Button type="submit">Sign In with Google</Button>
+        <Button className="fa fa-google google-button" type="submit"> Sign In with Google</Button>
 
         {error && <p>{error.message}</p>}
       </form>
@@ -179,7 +182,7 @@ class SignInFacebookBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <Button type="submit">Sign In with Facebook</Button>
+        <Button className="fa fa-facebook facebook-button" type="submit"> Sign In with Facebook</Button>
 
         {error && <p>{error.message}</p>}
       </form>
@@ -225,7 +228,7 @@ class SignInTwitterBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <Button type="submit">Sign In with Twitter</Button>
+        <Button className="fa fa-twitter twitter-button" type="submit"> Sign In with Twitter</Button>
 
         {error && <p>{error.message}</p>}
       </form>
